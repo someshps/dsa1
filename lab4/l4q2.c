@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-//rec program shows a seg fault => you forgot to write the base case 
+ 
 
 void merge(int a[], int s, int e, int m){
 	int i=s;
@@ -33,7 +33,7 @@ void merge(int a[], int s, int e, int m){
 	}
 
 	for(int k=s;k<=e;k++){
-		a[k]=p[k]; //made mistake for variables here
+		a[k]=p[k]; 
 	}
 
 
