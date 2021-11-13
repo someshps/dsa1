@@ -1,0 +1,3 @@
+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
+
+If this copy pasting does not work, then go to GitHub -> settings ->developer settings -> personal access tokens -> either regenerate or generate a new token
