@@ -3,14 +3,14 @@
 
 struct Node
 {
-    int key;
+    int data;
     struct Node *left, *right;
 };
 
-struct Node* newNode(int key)
+struct Node* newNode(int data)
 {
     struct Node* node = (struct Node*)malloc(sizeof(struct Node));
-    node->key = key;
+    node->data = data;
     node->left = node->right = NULL;
  
     return node;
@@ -22,16 +22,16 @@ struct Node* construct(int in[], int pre[], int s, int e, int* index)
         return NULL;
     }
  	
- 	int rootkey = pre[*index];
+ 	int rootdata = pre[*index];
  	(*index)++;
 
-    struct Node* node = newNode(rootkey);
+    struct Node* node = newNode(rootdata);
  
     
     int k;
     for (k = s; k <= e; k++)
     {
-        if (in[k] == node->key) {
+        if (in[k] == node->data) {
             break;
         }
     }
@@ -59,7 +59,7 @@ void postOrder(struct Node* root)
  
     postOrder(root->left);
     postOrder(root->right);
-    printf("%d ", root->key);
+    printf("%d ", root->data);
 }
 
 
